@@ -48,20 +48,22 @@ The focus is on building practical technical skills, learning how frontend and b
 
 ## Daily Schedule
 
-- **Stand-up + morning lecture**
+- **Stand-up + morning lecture (9am)**
   - Recap previous work
   - Share blockers and questions
   - Introduce new concepts
 
-- **Break**
+- **Break (12pm)**
 
-- **Afternoon lecture / guided support**
+- **Afternoon lecture / guided support (1pm)**
   - Review practice issues
   - Cover additional concepts
   - Walk through examples
 
-- **Technical communication practice**
+- **Technical communication practice (3:30pm)**
   - Explain a concept, workflow, or implementation clearly
+
+- **Peer code review (4pm)**
 
 - **Journal writing and reflection**
   - Record progress
