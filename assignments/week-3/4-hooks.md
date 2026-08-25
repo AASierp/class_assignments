@@ -11,7 +11,7 @@ Start Vite with:
 
     npm run dev
 
-Use a practice API selected by your instructor.
+Use ```https://dummyjson.com/``` or another API of your choosing.
 
 ## Request State
 
