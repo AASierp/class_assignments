@@ -17,32 +17,6 @@ Use `npm run build` to verify the production build.
 
 Use `npm run preview` to inspect the built application locally.
 
-## Required Structure
-
-Use a structure similar to:
-
-    src/
-    ├── components/
-    │   ├── AppHeader.tsx
-    │   ├── CourseFilters.tsx
-    │   ├── CourseList.tsx
-    │   ├── CourseCard.tsx
-    │   ├── CourseDetails.tsx
-    │   ├── Recommendations.tsx
-    │   └── AppFooter.tsx
-    ├── data/
-    │   └── courses.ts
-    ├── hooks/
-    │   └── useRecommendations.ts
-    ├── styles/
-    │   └── app.css
-    ├── types/
-    │   └── course.ts
-    ├── utils/
-    │   └── courseFilters.ts
-    ├── App.tsx
-    └── main.tsx
-
 ## Required Features
 
 The application must include:
@@ -55,7 +29,6 @@ The application must include:
 - Search and level filters
 - Selected-course details
 - Enrollment state
-- Remote recommendation data
 - Loading, success, empty, and error states
 - At least one appropriate `useEffect`
 - Correct effect dependencies

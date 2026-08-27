@@ -39,7 +39,6 @@ Create explicit prop types for:
 - `CourseList`
 - `CourseCard`
 - `CourseDetails`
-- `Recommendations`
 
 Include typed callback props for actions such as:
 

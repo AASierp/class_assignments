@@ -72,7 +72,6 @@ Apply Tailwind classes to:
 - `CourseFilters`
 - `CourseCard`
 - `CourseDetails`
-- `Recommendations`
 - `AppFooter`
 
 Keep app-specific behavior inside the React components.

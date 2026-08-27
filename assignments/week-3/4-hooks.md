@@ -17,16 +17,14 @@ Use ```https://dummyjson.com/``` or another API of your choosing.
 
 Create state for:
 
-- Remote recommendations
 - Loading status
 - Error message
-- Selected recommendation category
 
 Use clear initial values.
 
 ## Load Data with useEffect
 
-Use `useEffect` to request recommendations after the component first renders.
+Use `useEffect` to make an API request after the component first renders.
 
 The effect must:
 
@@ -56,21 +54,11 @@ Only the appropriate state should appear.
 
 Modify the request so it depends on the selected category.
 
-Include the category in the dependency array.
-
-Experiment with:
-
-1. Including the dependency
-2. Omitting the dependency
-3. Adding an unnecessary changing dependency
-
-Record what happens in each case.
+Make requests to different parts of the API based on different selected categories.
 
 ## Separate Responsibilities
 
 Move response-conversion logic into a helper function.
-
-Create a separate component for recommendation cards.
 
 Keep the effect focused on the side effect itself.
 
