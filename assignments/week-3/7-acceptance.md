@@ -1,7 +1,6 @@
 # Week 3 Vite React Course Dashboard
 
-### Learning Target
-> I can combine Vite, JSX, components, props, state, hooks, TypeScript, and a UI component library into a maintainable React application.
+This assignment is intended to give you a structure for acceptance testing that will ensure you have accomplished the goals of the earlier assignments.
 
 ## Project Setup
 
@@ -19,7 +18,7 @@ Use `npm run preview` to inspect the built application locally.
 
 ## Required Features
 
-The application must include:
+The application should include:
 
 - Valid JSX
 - At least five functional components
@@ -34,7 +33,7 @@ The application must include:
 - Correct effect dependencies
 - Typed form or input events
 - No unnecessary `any`
-- At least four library components
+- At least two reusable styled components
 - Visible focus states
 - Accessible labels
 - Responsive layout
