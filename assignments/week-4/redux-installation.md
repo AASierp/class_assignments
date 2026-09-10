@@ -166,20 +166,10 @@ Provider
 
 Both sibling components can access the same Redux store without receiving the Redux count through props.
 
-## 6. Replace the local reducer with Redux
+## 6. Add Redux component
 
-The original `Counter` uses `useReducer` for its reducer count:
-
-```tsx
-const [state, dispatch] = useReducer(
-  reducer,
-  { count: Number(initialCount) },
-)
-```
-
-The reducer and its action types are also defined inside `Counter.tsx`.
-
-Remove lines 1–102 from `src/Counter.tsx` and replace the complete file with:
+You can use this as an example file for utilizing the Redux state iinside of a component
+:
 
 ```tsx
 import {
@@ -292,44 +282,6 @@ export default function Counter({
     </div>
   )
 }
-```
-
-The component no longer defines or calls `useReducer`.
-
-It reads the Redux count with a selector:
-
-```tsx
-const reduxCount = useAppSelector(
-  (state) => state.counter.value,
-)
-```
-
-It obtains Redux’s `dispatch` function with:
-
-```tsx
-const dispatch = useAppDispatch()
-```
-
-It dispatches action objects by calling action creators:
-
-```tsx
-dispatch(increment())
-dispatch(decrement())
-dispatch(reset())
-```
-
-The update flow is:
-
-```text
-User clicks button
-        ↓
-Component dispatches an action
-        ↓
-Counter slice reducer handles the action
-        ↓
-Redux store receives the new state
-        ↓
-Subscribed components render the new value
 ```
 
 ## 7. Add the sibling component
