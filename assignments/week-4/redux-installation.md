@@ -166,123 +166,84 @@ Provider
 
 Both sibling components can access the same Redux store without receiving the Redux count through props.
 
-## 6. Add Redux component
+## 6. Use Redux state in a component
 
-You can use this as an example file for utilizing the Redux state iinside of a component
-:
+Now update `src/Counter.tsx` so it reads the Redux count and dispatches Redux actions.
+
+Replace the complete file with:
 
 ```tsx
-import {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
 import {
   decrement,
   increment,
   reset,
 } from './features/counter/counterSlice'
 import { useAppDispatch, useAppSelector } from './app/hooks'
-import { ThemeContext } from './ThemeContext'
-import type { CounterProps } from './types/props'
 
-export default function Counter({
-  initialCount,
-  pageTitle,
-  changeText,
-}: CounterProps) {
-  const [count, setCount] = useState<number>(
-    Number(initialCount),
-  )
-  const [refCountSnapshot, setRefCountSnapshot] =
-    useState<number>(0)
-  const [textToBeChanged, setTextToBeChanged] =
-    useState('')
-
-  const clickCountRef = useRef<number>(0)
-  const themeContext = useContext(ThemeContext)
-
+export default function Counter() {
   const reduxCount = useAppSelector(
     (state) => state.counter.value,
   )
   const dispatch = useAppDispatch()
 
-  if (!themeContext) {
-    throw new Error(
-      'Counter must be used inside ThemeContext.Provider',
-    )
-  }
-
-  useEffect(() => {
-    console.log(`Count has updated. It is now ${count}.`)
-  }, [count])
-
-  useEffect(() => {
-    console.log('Component has loaded.')
-  }, [])
-
-  function handleStateUpdate() {
-    setCount((currentCount) => currentCount + 1)
-    setRefCountSnapshot(clickCountRef.current)
-  }
-
-  function handleRefOnlyUpdate() {
-    clickCountRef.current += 1
-
-    console.log(
-      `ref updated without re-render: ${clickCountRef.current}`,
-    )
-  }
-
-  function changeTextToBeChanged(newText: string) {
-    setTextToBeChanged(newText)
-  }
-
   return (
-    <div>
-      <h1>{pageTitle}</h1>
+    <section>
+      <h1>Redux Counter</h1>
 
-      <p>Count: {count}</p>
       <p>Redux count: {reduxCount}</p>
-      <p>Ref count snapshot: {refCountSnapshot}</p>
-
-      <button onClick={handleStateUpdate}>
-        Add 1 to local counter
-      </button>
-
-      <button onClick={handleRefOnlyUpdate}>
-        Update ref only
-      </button>
 
       <button onClick={() => dispatch(increment())}>
-        Increment Redux count
+        Add 1
       </button>
 
       <button onClick={() => dispatch(decrement())}>
-        Decrement Redux count
+        Subtract 1
       </button>
 
       <button onClick={() => dispatch(reset())}>
-        Reset Redux count
+        Reset
       </button>
-
-      <input
-        value={textToBeChanged}
-        onChange={(event) =>
-          changeTextToBeChanged(event.target.value)
-        }
-      />
-
-      <button
-        onClick={() => changeText(textToBeChanged)}
-      >
-        Do the text update in the parent
-      </button>
-    </div>
+    </section>
   )
 }
 ```
+
+This component uses two Redux hooks:
+
+- `useAppSelector` reads the current count from the Redux store.
+- `useAppDispatch` sends actions to the Redux store.
+
+This line reads the value:
+
+```tsx
+const reduxCount = useAppSelector(
+  (state) => state.counter.value,
+)
+```
+
+The full Redux state currently looks like this:
+
+```ts
+{
+  counter: {
+    value: 1
+  }
+}
+```
+
+So `state.counter.value` gives the component the number stored in Redux.
+
+These lines update the value:
+
+```tsx
+dispatch(increment())
+dispatch(decrement())
+dispatch(reset())
+```
+
+Each dispatched action runs one reducer from `counterSlice.ts`.
+
+At this point, the component no longer needs `useState` for the shared counter. The count belongs in Redux because another component will read the same value in the next step.
 
 ## 7. Add the sibling component
 
