@@ -7,7 +7,7 @@ Follow these steps to add Jest and React Testing Library to this Vite, React, an
 Open a terminal in the run:
 
 ```bash
-npm install --save-dev jest jest-environment-jsdom @types/jest babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @testing-library/react @testing-library/dom @testing-library/jest-dom
+npm install --save-dev jest jest-environment-jsdom @types/jest babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @testing-library/react @testing-library/dom @testing-library/jest-dom @testing-library/user-event identity-obj-proxy
 ```
 
 Use these packages to run Jest, render React components, provide a browser-like test environment, transform TypeScript and JSX, and add DOM-specific assertions.
