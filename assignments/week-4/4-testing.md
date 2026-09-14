@@ -180,7 +180,7 @@ Test a realistic user flow, such as:
 * Removing an article and seeing the list update
 * Filtering the list and seeing only matching articles
 * Selecting an article and seeing its details
-* Toggling an article's saved or read state
+* Toggling an article's saved state
 
 The test must:
 
@@ -190,13 +190,15 @@ The test must:
 
 If the components depend on Redux or React context, render them with the required provider and test data.
 
-Interact with the page through visible controls instead of directly calling component functions.
+For Redux-connected components, create a test helper or wrapper that renders the component inside a Redux `Provider`. The test should supply a known store state so the expected behavior is predictable.
 
-## Part 4: Async UI Practice
+Interact with the page through visible controls instead of directly calling component functions.
 
 ## Part 4: Mocked Service Test
 
-Choose one service function from your reading-list application that uses `fetch`.
+If your reading-list application has a service function that uses `fetch`, test that service function.
+
+If your application does not currently have a service function, create a small article service such as `createArticle`, `loadArticles`, or `saveArticle`, then write a mocked `fetch` test for that function.
 
 Write a test that:
 
