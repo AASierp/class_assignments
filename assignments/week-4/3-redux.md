@@ -13,9 +13,11 @@ The project will help you compare local state, lifted state, Context, and Redux 
 ## Setup
 
 Create a Vite React TypeScript project:
-```npm create vite@latest redux-state-practice -- --template react-ts
+```bash
+npm create vite@latest redux-state-practice -- --template react-ts
 cd redux-state-practice
-npm install```
+npm install
+```
 
 
 Install:
