@@ -33,7 +33,7 @@ For each join table, explain what real-world relationship it represents.
 
 ## Part 5: Initial Schema Plan
 
-Create a table plan using [ChartDB](https://app.chartdb.io/) or another tool.
+Create a table plan using [ChartDB](https://dbdiagram.io/) or another tool.
 
 ## Focused Questions
 
