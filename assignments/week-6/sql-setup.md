@@ -104,12 +104,7 @@ Then run:
 SELECT current_user;
 ```
 
-You should see:
-
-```text
-fitness_booking
-app_user
-```
+You should see your database name and user name.
 
 ## Part 7: Stop the Database
 
