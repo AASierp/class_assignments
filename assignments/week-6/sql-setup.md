@@ -34,15 +34,6 @@ volumes:
   postgres_data:
 ```
 
-This creates:
-
-* A PostgreSQL server
-* A database named `fitness_booking`
-* A user named `app_user`
-* A password of `app_password`
-* A persistent Docker volume named `week6_postgres_data`
-* An initialization folder for SQL files
-
 ## Part 3: Start PostgreSQL Headlessly
 
 From the `database` folder, run:
