@@ -288,6 +288,8 @@ jdbc:postgresql://localhost:5432/postgres
 
 ## 9. Start the App with PostgreSQL
 
+Before starting this step, ensure you have your postgres database running.
+
 From the `spring-test` folder, run:
 
 ```bash
