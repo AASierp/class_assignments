@@ -49,6 +49,7 @@ Dependencies:
 - Spring Web
 - Spring Data JPA
 - PostgreSQL Driver
+- SpringDoc Open API
 ```
 
 ## 2. Create the Loan Entity
