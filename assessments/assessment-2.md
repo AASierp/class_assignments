@@ -70,6 +70,7 @@ We’re seeking a streamlined back-end solution to power our banking operations.
 - Spring Boot Starter Data JPA
 - Spring Boot DevTools
 - PostgreSQL JDBC Driver
+- Spring DOC Open API
 
 No other third-party libraries allowed.
 

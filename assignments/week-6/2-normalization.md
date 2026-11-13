@@ -24,9 +24,14 @@ Booking Status: confirmed
 Booked At: 2026-09-21 09:00
 ```
 
-Identify which values would be duplicated if records like this were stored repeatedly.
+Identify which values would be duplicated if records like this were stored repeatedly. 
 
-Look especially for values that describe different kinds of things, such as people, scheduled events, places, and equipment.
+- potentially all of these values could be duplicated 
+- but particularly - location, trainer(s), equipment, class
+
+Look especially for values that describe different kinds of things, such as people, scheduled events, places, and equipment. 
+
+- each of these things should really have their own tables with table id. 
 
 ## Part 2: Separate Repeated Concepts
 
@@ -66,9 +71,41 @@ Use this step to check whether the normalized model still supports useful applic
 ## Focused Questions
 
 1. What duplicated data did normalization remove?
+
+    - It prevented equipment, location, trainer, member, booking and class information from
+    being repeated or potentially repeated by breaking each of these into their own tables and associating them by keys.
+
 2. Which fields were hardest to place in the right table?
+
+    - The room info was initially in the location table, but a location can
+    have many rooms, so I broke it out into its own table. Also, class_session had location_id and room_id at one point but then I realized that the room table contained location_id so I removed location_id from class_sessions.
+
 3. Which relationships need join tables, and why?
+
+    trainer and class sessions need a join table because it was a many to many relationship. One trainer may have many class_sessions and one class_sessions may have many trainers.
+
+    the class type and equipment had the same many to many for the same reason.
+
 4. What information belongs on a scheduled class session?
+
+    - id
+    - class_type_id
+    - room_id
+    - start-time
+    - capacity
+
 5. What information belongs on a class type?
+
+    - id
+    - title
+    - description
+    - duration
+
 6. How can normalized data still support useful frontend views?
+
+    noramlizing the data does not affect the front ends ability to aggregate
+    organize and display data.
+
 7. What tradeoff comes with splitting data across more tables?
+
+    the information becomes decentralized and you have to understand the relationships between the tables. This will also require more joins.

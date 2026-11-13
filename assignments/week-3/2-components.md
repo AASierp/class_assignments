@@ -75,13 +75,13 @@ Child components must not modify their props.
 
 ## Questions
 
-1. What is a React component?
-2. What are props?
-3. Why are props treated as read-only?
-4. What is one-way data flow?
-5. Why is `CourseCard` more reusable when it receives props?
-6. Why does React require keys for rendered lists?
-7. What is component composition?
+1. What is a React component? - it is a function that returns jsx
+2. What are props? - they are properties that are passed from a parent comp to a child comp
+3. Why are props treated as read-only? - the parent owns the data, it should not be modified by the child
+4. What is one-way data flow? - the data flows in one direction, top to bottom, parent to child, through props.
+5. Why is `CourseCard` more reusable when it receives props? - because it allows you to pass different data inside. Rather than hard coding values.
+6. Why does React require keys for rendered lists? It has something to do with managing state - it needs a reference so it knows what to change, when changes occur. 
+7. What is component composition? - creating a larger component for smaller components. (APP.jsx)
 
 ## Extension
 

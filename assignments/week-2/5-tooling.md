@@ -93,13 +93,34 @@ Locate and briefly explain these `tsconfig` options:
 ## Questions
 
 1. What is the purpose of the TypeScript compiler?
+- to check and catch errors in your typescript and and transpile TS into JS
+
 2. What is the purpose of `tsconfig.json`?
+- it allows you to give instructions to the compiler. where your source code lives and where compiled
+js should be stored, for example.
+
 3. What is the difference between `src` and `dist`?
-4. Why should generated JavaScript usually not be edited directly?
+- src tells the compiler where the target files live that are to be compiled. 
+dist tells the compiler where the compiled files should be created/output.
+
+4. Why should generated JavaScript usually not be edited directly?'
+- because it will just be overwritten the next time compilation happens.
+
 5. What does strict type checking do?
+- it tells the compiler to apply the "strict" type rules.
+it makes it more aggressive in its search for compliance to the rules.
+
 6. What information does a compiler error provide?
+- it gives you the source file of the issue, the line number and the column number.
+is also provides the corresponding error code. You also get a clear explaination of what the error is.
+
 7. What is watch mode useful for?
+- watch mode alerts you to changes made in the observed file. on edits it will recompile and save, rather than you having to recompile each time manually.
+
 8. What does `noEmitOnError` change?
+
+- it prevents the compiler from compiling and producing a js file when an error is encountered.
+without it, you would see errors reflected in the .js output file.
 
 ## Extension
 

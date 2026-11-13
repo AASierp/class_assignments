@@ -11,50 +11,50 @@ The app should manage instructors, students, lessons, and courses, then print su
 Your app must:
 
 1. Model a small course platform with at least:
-   - two students
-   - one instructor
-   - two lessons
-   - one course
-2. Store relationships between those objects.
-3. Print a course summary that includes instructor info and student counts.
+   - two students - check
+   - one instructor - check
+   - two lessons - check
+   - one course - check
+2. Store relationships between those objects. - check
+3. Print a course summary that includes instructor info and student counts. - check
 4. Create a reusable response shape for successful and failed data operations.
-5. Simulate updating course data without requiring a full course object.
-6. Prevent editing of data that should be treated as published or locked.
-7. Store some data in a keyed lookup structure.
+5. Simulate updating course data without requiring a full course object. - check
+6. Prevent editing of data that should be treated as published or locked. - check
+7. Store some data in a keyed lookup structure. - check 
 8. Use at least two generic utilities or functions on multiple data types.
 
 ## TypeScript Concepts That Must Be Demonstrated
 
 Your solution must clearly demonstrate:
 
-- interfaces
-- interface extension
-- reusable object shapes
-- derived or composed types
-- generic functions
-- generic types
-- Partial
-- Readonly
-- Record
-- typed arrays
-- typed function parameters
-- typed return values
+- interfaces - check
+- interface extension - check
+- reusable object shapes - check
+- derived or composed types - check
+- generic functions - check
+- generic types - check
+- Partial - check
+- Readonly - check
+- Record - check
+- typed arrays - check
+- typed function parameters - check
+- typed return values - check
 
 ## Required Features
 
 ### Base Models
 Create interfaces for:
-- Person
-- Student
-- Instructor
-- Lesson
-- Course
+- Person - check
+- Student - check
+- Instructor - check
+- Lesson - check
+- Course - check
 
 Use extension where it makes sense.
 
 ### Reusable Derived Shapes
 Create at least one derived type such as:
-- CourseSummary
+- CourseSummary - check
 - StudentSummary
 - EnrollmentReport
 
@@ -62,15 +62,15 @@ This type should be built from existing models rather than rewritten from scratc
 
 ### Utility Types
 You must use:
-- Partial for an update object
-- Readonly for data that should not change after publishing
-- Record for storing keyed data such as progress, titles, or lookup tables
+- Partial for an update object - check
+- Readonly for data that should not change after publishing - check
+- Record for storing keyed data such as progress, titles, or lookup tables - check
 
 ### Generic Functions
 Create at least two generic functions such as:
 - getLastItem
 - wrapSuccessResponse
-- findById
+- findById - check
 - groupByKey
 
 Each generic function must be used with more than one data type.

@@ -23,19 +23,19 @@ Your app must:
 
 Your solution must clearly demonstrate:
 
-- string, number, boolean
-- arrays
-- object types
-- interfaces or type aliases
-- union types
-- intersection types
-- string literal types or enums
-- function parameter types
-- function return types
-- type guards using at least two different narrowing strategies
-- unknown
-- void
-- never
+- string, number, boolean - check
+- arrays - check
+- object types - check
+- interfaces or type aliases - check
+- union types - check
+- intersection types - check
+- string literal types or enums - check
+- function parameter types -check
+- function return types -check
+- type guards using at least two different narrowing strategies - check
+- unknown - check
+- void - check
+- never -check
 - a justified type assertion
 
 ## Required Features

@@ -35,6 +35,8 @@ For each value, classify it as:
 
 Explain why.
 
+- searchValue - lifted - 
+
 ## Part 2: Lift Shared State
 
 Build or refactor the dashboard so these components coordinate correctly:
